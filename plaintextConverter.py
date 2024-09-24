@@ -129,6 +129,7 @@ def processGPSPPSPacket(packet):
 def make_plaintext(rawFile,date_suffix=None):
     if date_suffix is None:
         date_suffix = rawFile[-24:-4]
+        
     mag_file = f"{baseFolder}/magnetometer/mag_{date_suffix}.csv"
     imager_counts_filenames = [f"{baseFolder}/imager_data/imager{i}_{date_suffix}.csv" for i in range(7)]
     gps_file = f"{baseFolder}/gps/gps_{date_suffix}.csv"
